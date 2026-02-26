@@ -118,21 +118,6 @@
 
     </style>
 </head>
-function countUp(el, target) {
-    let count = 0;
-    const increment = target / 100;
-    const timer = setInterval(() => {
-        count += increment;
-        if (count >= target) { count = target; clearInterval(timer); }
-        el.textContent = Math.floor(count);
-    }, 20);
-}
-window.addEventListener('load', () => {
-    countUp(document.getElementById('gd-clears'), 1278);
-    countUp(document.getElementById('debates'), 542);
-    countUp(document.getElementById('manga'), 684);
-});
-
 
 <body>
     <div class="particles" id="particles"></div>
@@ -199,9 +184,6 @@ window.addEventListener('load', () => {
         <div style="font-size: 3rem; margin-bottom: 0.5rem;">🍣</div>
         <span>Sushi</span>
     </div>
-    <div class="fav-item" style="text-align: center;">
-        <img src="https://i.pinimg.com/736x/72/ed/52/72ed521372701ea76f9c5bc61d9e9f3c.jpg" alt="Lucifer" style="border-radius: 50%; box-shadow: 0 0 20px #FF4500;">
-        <span>Lucifer (Umineko)</span>
     </div>
 </div>
 
@@ -240,6 +222,20 @@ function rotateQuotes() {
 }
 setInterval(rotateQuotes, 4000);
 rotateQuotes(); // Initial load
+        function countUp(el, target) {
+    let count = 0;
+    const increment = target / 100;
+    const timer = setInterval(() => {
+        count += increment;
+        if (count >= target) { count = target; clearInterval(timer); }
+        el.textContent = Math.floor(count);
+    }, 20);
+}
+window.addEventListener('load', () => {
+    countUp(document.getElementById('gd-clears'), 1278);
+    countUp(document.getElementById('debates'), 542);
+    countUp(document.getElementById('manga'), 684);
+});
 
 
     </script>
